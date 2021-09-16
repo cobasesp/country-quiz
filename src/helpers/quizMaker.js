@@ -18,6 +18,7 @@ export default function getRandomQuiz(countries) {
     return {
         "target": target,
         "errors": errors,
-        "question": (qType == 'capital') ? 'Que capital es?' : 'Que bandera es esta?'
+        "type": qType,
+        "question": (qType == 'capital') ? `What is the capital of ${target.name}?` : 'Of which country is this flag?'
     }
 }

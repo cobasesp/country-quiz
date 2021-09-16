@@ -2,6 +2,8 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import getRandomQuiz from './helpers/quizMaker';
 
+import QuizComponent from './components/quizComponent';
+
 function App() {
 
   const [countries, setCountries] = useState([]);
@@ -47,7 +49,13 @@ function App() {
   }
 
   return (
-    <div className="test"></div>
+    <div>
+      {currentQuiz != null &&
+        <QuizComponent
+          quiz={currentQuiz}
+        ></QuizComponent>
+      }
+    </div>
   );
 }
 
