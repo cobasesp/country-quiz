@@ -81,3 +81,23 @@ div#quiz-box {
   border-color: #F9A826;
   color: #FFF;
 }
+
+@media screen and (max-width: 540px){
+  .container {
+    width: 95%;
+  }
+
+  .title{
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 425px){
+  .title{
+    font-size: 30px;
+  }
+
+  .title img{
+    width: 100px;
+  }
+}
