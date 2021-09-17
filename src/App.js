@@ -50,11 +50,18 @@ function App() {
 
   return (
     <div>
-      {currentQuiz != null &&
-        <QuizComponent
-          quiz={currentQuiz}
-        ></QuizComponent>
-      }
+      <div className="container">
+        <h1 className="title">
+            Country quiz
+            <img src={process.env.PUBLIC_URL + '/undraw_adventure.svg'} alt="" />
+        </h1>
+        {currentQuiz != null &&
+          <QuizComponent
+            quiz={currentQuiz}
+          ></QuizComponent>
+        }
+        {/* Poner aqui otro componente que se vea si el resultado no es null y poner null el quiz */}
+      </div>
     </div>
   );
 }
