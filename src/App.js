@@ -8,6 +8,7 @@ function App() {
 
   const [countries, setCountries] = useState([]);
   const [currentQuiz, setCurrentQuiz] = useState(null);
+  const [points, setPoints] = useState(0);
 
   // Al inicio cargo los datos de los paises desde la API
   useEffect(() => {
@@ -48,6 +49,11 @@ function App() {
     setCurrentQuiz(quiz);
   }
 
+  const addPoint = () => {
+    let p = points + 1;
+    setPoints(p);
+  }
+
   return (
     <div>
       <div className="container">
@@ -58,6 +64,7 @@ function App() {
         {currentQuiz != null &&
           <QuizComponent
             quiz={currentQuiz}
+            addPoint={addPoint}
           ></QuizComponent>
         }
         {/* Poner aqui otro componente que se vea si el resultado no es null y poner null el quiz */}

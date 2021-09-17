@@ -35,6 +35,10 @@ export function getAnswers(quiz){
     return answers;
 }
 
+export function checkAnswer(answer, quiz){
+    return (quiz.target.name == answer);
+}
+
 export default function getRandomQuiz(countries) {
     let random = getRandom(countries.length);
     let qType = questionType[((random % 2 == 0) ? 0 : 1)];
